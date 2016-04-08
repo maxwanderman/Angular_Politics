@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="randomPol">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Politics</title>
+    <script src="angular.min.js"></script>
+    <script src="client.js"></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body ng-controller="PoliticController">
+    <h1>RANDOM POLITICS</h1>
+    <button ng-click="getCandidates()" class="first">Click for the next vendors of America</button>
+    <button ng-click="getResult()" class="second">Click for 'merica</button><br />
+    <div class="parties">
+      <h2>Democrats</h2>
+      <ul>
+        <li ng-repeat="demos in democrats">
+          {{demos}}
+        </li>
+      </ul>
+    </div>
+    <div class="parties">
+      <h2>Republicans</h2>
+      <ul>
+        <li ng-repeat="repubs in republicans">
+          {{repubs}}
+        </li>
+      </ul>
+    </div><br />
+    <div class="final">
+      <h2 class="lastClass">Result</h2>
+      <ul class="woo" ng-show="resulting">
+          {{result}}
+      </ul>
+    </div>
+  </body>
+</html>
